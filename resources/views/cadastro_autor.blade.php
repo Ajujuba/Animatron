@@ -7,7 +7,7 @@
             @csrf
             <div class="form-group">
               <label for="exampleFormControlInput1">Nome do Autor</label>
-              <input type="email" class="form-control" name="nome_autor">
+              <input type="text" class="form-control" name="nome_autor" required>
             </div>
             <div class="row">
                 <button class="btn btn-outline-success my-2 my-sm-0 btn-block" type="submit">Enviar</button>

@@ -40,5 +40,10 @@ Route::post('/cadastro', 'AnimeController@store')
 ;
 
 Route::get('/cadastroAutor', 'CriadoresController@create') 
-->name('inserir.autor') 
+->name('cadastro.autor') 
 ;
+
+Route::post('/cadastroAutor', 'CriadoresController@store')
+->name('inserir.autor')
+;
+

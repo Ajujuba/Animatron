@@ -4,7 +4,7 @@
 @section('conteudo')
 <div class="row justify-content-center">
     <div class="col">
-    <a href="{{route('inserir.autor')}}" class="btn btn-info btn-lg btn-block"> Cadastrar </a>
+    <a href="{{route('cadastro.autor')}}" class="btn btn-info btn-lg btn-block"> Cadastrar </a>
     </div>
 </div>
 <div class="row" >

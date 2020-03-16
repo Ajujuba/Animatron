@@ -36,7 +36,10 @@ class CriadoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $criadores = new Criadores();
+        $criadores->nome=$request->nome_autor;
+        $criadores->save();
+        return redirect()->route('autor.lista');
     }
 
     /**

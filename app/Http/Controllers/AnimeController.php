@@ -46,7 +46,8 @@ class AnimeController extends Controller
         $animes->sinopse=$request->sinopse;
         $animes->criadores_id=$request->autor;
         $animes->save();
-        dd($request);
+
+        return redirect()->route('animes.lista');
         
     }
 
