@@ -59,9 +59,12 @@ class CriadoresController extends Controller
      * @param  \App\Criadores  $criadores
      * @return \Illuminate\Http\Response
      */
-    public function edit(Criadores $criadores)
+    public function edit($id)
     {
-        //
+        $criador=Criadores::find($id);
+        
+        return view('cadastro_autor', ['criador'=>$criador]);
+
     }
 
     /**
@@ -73,7 +76,10 @@ class CriadoresController extends Controller
      */
     public function update(Request $request, Criadores $criadores)
     {
-        //
+        $criadores=Criadores::find($request->id);
+        $criadores->nome=$request->nome_autor;
+        $criadores->save();
+        return redirect()->route('autor.lista');
     }
 
     /**

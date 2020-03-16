@@ -35,7 +35,7 @@
                     <td class="text-center">
                         <!-- <i class="fas fa-trash-alt"></i>-->
                         <button type="button" class="btn btn-info">Apagar</button>
-                        <button type="button" class="btn btn-info"> Editar </button>
+                    <a href="{{route('editar.autor', ['id'=>$criador->id])}}" class="btn btn-info"> Editar </button>
                         
                      </td>
                 </tr>

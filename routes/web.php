@@ -47,3 +47,14 @@ Route::post('/cadastroAutor', 'CriadoresController@store')
 ->name('inserir.autor')
 ;
 
+// Route::get('/batata/{nome? esse ponto de interrogação torna o parametro opcional}', function($nome='ana julia' caso n passem parametros dps da barra exibe ana julia){
+//     echo $nome;
+// });
+
+Route::get('/autor/editar/{id}', 'CriadoresController@edit')
+->name('editar.autor')
+;
+
+Route::put('/autor/editar/', 'CriadoresController@update')
+->name('atualizar.autor')
+;
