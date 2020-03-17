@@ -28,6 +28,7 @@ class AnimeController extends Controller
     public function create()
     {
         $criador=\App\Criadores::all(['id','nome']);
+      
         return view('cadastro', ['criador'=>$criador]);
     }
 
@@ -68,9 +69,11 @@ class AnimeController extends Controller
      * @param  \App\Anime  $anime
      * @return \Illuminate\Http\Response
      */
-    public function edit(Anime $anime)
+    public function edit($id)
     {
-        //
+        $criador=\App\Criadores::all(['id','nome']);
+        $anime=Anime::find($id);
+        return view('cadastro', ['anime'=>$anime], ['criador'=>$criador]);
     }
 
     /**
@@ -82,7 +85,15 @@ class AnimeController extends Controller
      */
     public function update(Request $request, Anime $anime)
     {
-        //
+        $anime=Anime::find($request->id);
+        $anime->nome=$request->nome_anime;
+        $anime->qtd_temp=$request->qtd_temp;
+        $anime->data=$request->data;
+        $anime->sinopse=$request->sinopse;
+        $anime->criadores_id=$request->autor;
+        $anime->save();
+        return redirect()->route('animes.lista');
+
     }
 
     /**

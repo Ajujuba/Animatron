@@ -43,6 +43,7 @@ Route::get('/cadastroAutor', 'CriadoresController@create')
 ->name('cadastro.autor') 
 ;
 
+
 Route::post('/cadastroAutor', 'CriadoresController@store')
 ->name('inserir.autor')
 ;
@@ -57,4 +58,16 @@ Route::get('/autor/editar/{id}', 'CriadoresController@edit')
 
 Route::put('/autor/editar/', 'CriadoresController@update')
 ->name('atualizar.autor')
+;
+
+Route::get('/anime/editar/{id}', 'AnimeController@edit')
+->name('editar.anime')
+;
+
+Route::put('/anime/editar/', 'AnimeController@update')
+->name('atualizar.anime')
+;
+
+Route::delete('/apagarAutor', 'CriadoresController@destroy')
+->name('apagar.autor')
 ;

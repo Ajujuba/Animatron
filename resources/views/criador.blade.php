@@ -34,8 +34,8 @@
                     </td>
                     <td class="text-center">
                         <!-- <i class="fas fa-trash-alt"></i>-->
-                        <button type="button" class="btn btn-info">Apagar</button>
-                    <a href="{{route('editar.autor', ['id'=>$criador->id])}}" class="btn btn-info"> Editar </button>
+                    <a href="{{route('apagar.autor', ['id'=>$criador->id])}}" class="btn btn-info">Apagar</a>
+                    <a href="{{route('editar.autor', ['id'=>$criador->id])}}" class="btn btn-info"> Editar </a>
                         
                      </td>
                 </tr>

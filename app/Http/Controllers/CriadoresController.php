@@ -88,8 +88,9 @@ class CriadoresController extends Controller
      * @param  \App\Criadores  $criadores
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Criadores $criadores)
+    public function destroy($id)
     {
-        //
+        $criador=Criadores::find($id);
+        $criador->delete();
     }
 }

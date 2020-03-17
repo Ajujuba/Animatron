@@ -37,7 +37,7 @@
                     <td class="text-center">
                        <!-- <i class="fas fa-trash-alt"></i>-->
                        <button type="button" class="btn btn-info">Apagar</button>
-                       <button type="button" class="btn btn-info"> Editar </button>
+                        <a href="{{route('editar.anime', ['id'=>$anime->id])}}" class="btn btn-info"> Editar </a>
                     </td>
                 </tr> 
                 @endforeach
