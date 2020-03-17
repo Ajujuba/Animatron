@@ -68,6 +68,10 @@ Route::put('/anime/editar/', 'AnimeController@update')
 ->name('atualizar.anime')
 ;
 
-Route::delete('/apagarAutor', 'CriadoresController@destroy')
+Route::delete('/apagarAutor/{id}', 'CriadoresController@destroy')
 ->name('apagar.autor')
+;
+
+Route::delete('/apagarAnime/{id}', 'AnimeController@destroy')
+->name('apagar.anime')
 ;

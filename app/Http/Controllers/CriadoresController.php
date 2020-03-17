@@ -92,5 +92,7 @@ class CriadoresController extends Controller
     {
         $criador=Criadores::find($id);
         $criador->delete();
+        return redirect()->route('autor.lista');
+    
     }
 }

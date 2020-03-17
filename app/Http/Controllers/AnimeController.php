@@ -102,8 +102,10 @@ class AnimeController extends Controller
      * @param  \App\Anime  $anime
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Anime $anime)
+    public function destroy($id)
     {
-       
+       $anime=Anime::find($id);
+       $anime->delete();
+       return redirect()->route('animes.lista');
     }
 }

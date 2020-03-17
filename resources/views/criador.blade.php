@@ -33,10 +33,15 @@
                        @endforeach
                     </td>
                     <td class="text-center">
-                        <!-- <i class="fas fa-trash-alt"></i>-->
-                    <a href="{{route('apagar.autor', ['id'=>$criador->id])}}" class="btn btn-info">Apagar</a>
-                    <a href="{{route('editar.autor', ['id'=>$criador->id])}}" class="btn btn-info"> Editar </a>
-                        
+                        <!-- <i class="fas fa-trash-alt"></i>--> 
+                        <a href="{{route('editar.autor', ['id'=>$criador->id])}}" class="btn btn-info"> Editar </a>
+                        <br><br>
+                        <form method="POST" action="{{route('apagar.autor', ['id'=>$criador->id])}}">
+                            {{ csrf_field() }}
+                            @method('delete') 
+                            <button type="submit" class="btn btn-info">Deletar</button>
+                        </form>
+                  
                      </td>
                 </tr>
                 

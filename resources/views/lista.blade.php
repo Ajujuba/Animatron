@@ -36,8 +36,13 @@
                     </td>
                     <td class="text-center">
                        <!-- <i class="fas fa-trash-alt"></i>-->
-                       <button type="button" class="btn btn-info">Apagar</button>
                         <a href="{{route('editar.anime', ['id'=>$anime->id])}}" class="btn btn-info"> Editar </a>
+                        <br><br>
+                        <form method="POST" action="{{route('apagar.anime', ['id'=>$anime->id])}}">
+                            {{ csrf_field() }}
+                            @method('delete') 
+                            <button type="submit" class="btn btn-info">Deletar</button>
+                        </form>
                     </td>
                 </tr> 
                 @endforeach
