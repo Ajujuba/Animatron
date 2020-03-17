@@ -105,7 +105,8 @@ class AnimeController extends Controller
     public function destroy($id)
     {
        $anime=Anime::find($id);
-       $anime->delete();
-       return redirect()->route('animes.lista');
+       dd($id);
+    //    $anime->delete();
+    //    return redirect()->route('animes.lista');
     }
 }

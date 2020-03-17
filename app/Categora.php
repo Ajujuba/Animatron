@@ -10,5 +10,6 @@ class Categora extends Model
     use SoftDeletes;
     public $fillable =['nome'];
     public $timestamps=false;// isso desativa a procura pelos campos de timestamp 
+ 
 
 }
